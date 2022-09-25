@@ -7,9 +7,6 @@
     width: 10px;
     z-index: 100;
   }
-  
-  /* Track */
-
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
