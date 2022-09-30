@@ -7,7 +7,7 @@ import '../index.css';
 const Content = () => {
     return (
         <div className='bg-black text-white'>
-            <div className='cursor-pointer m-4'>
+            <div className='cursor-pointer p-4'>
                 <img className='' src={img1} alt="" />
                 <div className='flex my-4'>
                     <img className='h-10 w-10' src={img2} alt="" />

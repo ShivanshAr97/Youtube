@@ -1,20 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Content from './Content'
 
 const Contents = () => {
     return (
         <>
         <div className='flex'>
-        <Content/>        
-        <Content/>        
-        <Content/>        
-        <Content/>        
+        <Link to="/video"><Content/></Link>                
+        <Link to="/video"><Content/></Link>
+        <Link to="/video"><Content/></Link>
+        <Link to="/video"><Content/></Link>       
         </div>
         <div className='flex'>
-        <Content/>        
-        <Content/>        
-        <Content/>        
-        <Content/>        
+        <Link to="/video"><Content/></Link>
+        <Link to="/video"><Content/></Link>
+        <Link to="/video"><Content/></Link>
+        <Link to="/video"><Content/></Link>
         </div>
         </>
     )
