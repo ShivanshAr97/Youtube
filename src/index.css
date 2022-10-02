@@ -15,11 +15,11 @@
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: darkslategray; 
+    background: black; 
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: grey; 
+    background: rgb(181, 180, 180); 
   }
