@@ -7,7 +7,7 @@ import SingleChatSmall from './SingleChatSmall';
 
 const ChatSmall = () => {
   return (
-    <div className='w-20 h-auto bg-slate-900 text-white'>
+    <div className='w-20 fixed top-[4rem] h-[92vh] bg-slate-900 text-white'>
     <Link to="/">
     <SingleChatSmall icon= <AiFillHome size="24px"/> title="Home"/>
     </Link>

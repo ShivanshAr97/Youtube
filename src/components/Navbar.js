@@ -7,20 +7,29 @@ import { MdOutlineAccountCircle } from 'react-icons/md';
 import { AiFillYoutube, AiOutlineSearch } from 'react-icons/ai';
 
 import ChatBig from "./ChatBig";
+import Settings from './Setting';
 const Navbar = () => {
 
     const [showModal, setShowModal] = useState(false)
+    const [showModal2, setShowModal2] = useState(false)
 
     function close() {
         setShowModal(false)
     }
+    function close2() {
+        setShowModal2(false)
+    }
     function modalShow() {
         setShowModal(true)
+    }
+    function modal2Show() {
+        setShowModal2(true)
     }
     return (
         <>
             <div className='bg-gray-900 sticky top-0 z-50 flex items-center overflow-auto px-6 py-3 justify-between text-white right-0'>
             <ChatBig onClose={close} visible={showModal} />
+            <Settings onClose={close2} visible={showModal2} />
                 <div className='flex items-center'>
                     <span className='cursor-pointer' onClick={modalShow}><IoReorderThreeOutline size="40px" /></span>
                     <Link to="/">
@@ -38,7 +47,7 @@ const Navbar = () => {
                 <div className='flex items-center'>
                     <BiVideoPlus className=' cursor-pointer mx-4' size="24px"/>
                     <BsBell className=' cursor-pointer mx-4' size="24px"/>
-                    <MdOutlineAccountCircle className=' cursor-pointer mx-4 mr-6' size="24px"/>
+                    <span onClick={modal2Show}><MdOutlineAccountCircle className=' cursor-pointer mx-4 mr-6' size="24px"/></span>
                 </div>
             </div>
         </>

@@ -4,7 +4,7 @@ import SingleTag from './SingleTag'
 const Tags = () => {
   return (
     <>
-    <div className='bg-slate-900 h-[3.5rem] border-y w-full px-[2rem] flex items-center border-gray-600 text-white'>
+    <div className='bg-slate-900 fixed h-[3.5rem] border-y w-[94%] ml-20 px-[2rem] flex items-center border-gray-600 text-white'>
         <SingleTag title="All"/>
         <SingleTag title="JavaScript"/>
         <SingleTag title="Laptops"/>

@@ -4,7 +4,7 @@ import Content from './Content'
 
 const Contents = () => {
     return (
-        <>
+        <div className='w-[93.7%] flex flex-col ml-20'>
         <div className='flex'>
         <Link to="/video"><Content/></Link>                
         <Link to="/video"><Content/></Link>
@@ -17,7 +17,7 @@ const Contents = () => {
         <Link to="/video"><Content/></Link>
         <Link to="/video"><Content/></Link>
         </div>
-        </>
+        </div>
     )
 }
 
