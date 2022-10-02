@@ -2,6 +2,7 @@ import React from 'react'
 import ChatBig from './ChatBig';
 import ChatSmall from './ChatSmall';
 import ExplorePage from './ExplorePage';
+import Settings from './Setting';
 
 const Explore = () => {
     return (
@@ -12,6 +13,7 @@ const Explore = () => {
                     <ExplorePage/>
                 </div>
                 <span className='overflow-auto'><ChatBig /></span>
+                <span className='overflow-auto'><Settings /></span>
             </div>
         </>
     )

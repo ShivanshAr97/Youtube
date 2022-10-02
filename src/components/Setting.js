@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../index.css'
 import { AiOutlineSetting, AiOutlineDollar } from 'react-icons/ai';
 import { BsFilePerson, BsMoon, BsGlobe, BsKeyboard } from 'react-icons/bs';
@@ -7,8 +7,9 @@ import { BiLogOut, BiHelpCircle } from 'react-icons/bi';
 import { IoLanguageOutline } from 'react-icons/io5';
 import { SiYoutubestudio } from 'react-icons/si';
 import { MdOutlineFeedback, MdSwitchAccount, MdOutlineSecurity } from 'react-icons/md';
-import SingleSetting from './SingleSetting';
 import { MdOutlineAccountCircle } from 'react-icons/md';
+
+import SingleSetting from './SingleSetting';
 
 export default function Settings({ visible, onClose }) {
     function handleOnClose(e) {
