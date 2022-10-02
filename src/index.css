@@ -8,9 +8,14 @@
     z-index: 100;
   }
    
+  ::-webkit-scrollbar-track {
+    background:black;
+    border-radius: 0px;
+  }
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: grey; 
+    background: darkslategray; 
     border-radius: 10px;
   }
   

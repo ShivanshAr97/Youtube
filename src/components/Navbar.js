@@ -18,7 +18,7 @@ const Navbar = () => {
     }
     return (
         <>
-            <div className='bg-gray-900 flex items-center overflow-auto px-6 py-3 justify-between text-white right-0 -z-10'>
+            <div className='bg-gray-900 sticky top-0 z-50 flex items-center overflow-auto px-6 py-3 justify-between text-white right-0'>
             <ChatBig onClose={close} visible={showModal} />
                 <div className='flex items-center'>
                     <span className='cursor-pointer' onClick={modalShow}><IoReorderThreeOutline size="40px" /></span>

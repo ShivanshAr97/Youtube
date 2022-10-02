@@ -8,7 +8,7 @@ const Channel = () => {
                 <div className='m-2 flex'>
                     <img className='w-12 h-12' src={img2} alt="" />
                     <div className='mx-3'>
-                        <h3 className='text-white font-bold'>CodeWithHarry</h3>
+                        <h3 className='text-white font-bold cursor-pointer'>CodeWithHarry</h3>
                         <p className='text-[0.85rem] text-gray-400 font-medium'>3.30M subscribers</p>
                     </div>
                 </div>

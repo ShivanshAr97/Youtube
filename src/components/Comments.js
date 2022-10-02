@@ -1,5 +1,7 @@
 import React from 'react'
-import { MdSort } from 'react-icons/md';
+import img2 from '../img/img1_1.png'
+import img3 from '../img/User.png'
+import { MdSort,MdOutlineAccountCircle } from 'react-icons/md';
 import Comment from './Comment';
 
 const Comments = () => {
@@ -12,7 +14,16 @@ const Comments = () => {
           <p className='mx-2 cursor-pointer'>SORT BY</p>
         </div>
       </div>
-      <Comment />
+      <div className='flex my-4'>
+                <span className='text-gray-400'><MdOutlineAccountCircle size='60' /></span>
+                <input className='text-sm m-3 mx-6 w-5/6 outline-none text-white placeholder:text-gray-400 border-b-[0.5px] border-gray-400 bg-transparent' type="text" placeholder='Add a comment ...' />
+            </div>
+            <div className='text-white'>
+      <Comment icon={img2} name="CWH" desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque excepturi necessitatibus eligendi sunt qui quis labore placeat iure obcaecati." like="24" />
+      <Comment icon={img3} name="CWH" desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque excepturi necessitatibus eligendi sunt qui quis labore placeat iure obcaecati." like="24" />
+      <Comment icon={img3} name="CWH" desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque excepturi necessitatibus eligendi sunt qui quis labore placeat iure obcaecati." like="24" />
+      <Comment icon={img3} name="CWH" desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque excepturi necessitatibus eligendi sunt qui quis labore placeat iure obcaecati." like="24" />
+      </div>
     </>
   )
 }

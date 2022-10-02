@@ -1,29 +1,31 @@
 import React from 'react'
 import img2 from '../img/img1_1.png'
 import { MdOutlineAccountCircle } from 'react-icons/md';
+import { BiDislike, BiLike } from 'react-icons/bi';
 
-const Comment = () => {
+const Comment = (props) => {
     return (
         <>
-            <div className='flex my-4'>
-                <span className='text-gray-400'><MdOutlineAccountCircle size='60' /></span>
-                <input className='text-sm m-3 mx-6 w-5/6 outline-none text-gray-400 placeholder:text-gray-400 border-b-[0.5px] border-gray-400 bg-transparent' type="text" placeholder='Add a comment ...' />
-            </div>
+
             <div className='flex mx-2 my-4'>
-                <img className='w-12 h-12' src={img2} alt="" />
+                <img className='w-12 h-12 text-white bg-white cursor-pointer rounded-full' src={props.icon} alt="" />
                 <div className='mx-4'>
-                    <p className='text-white font-bold text-sm'>Lorem ipsum dolor sit amet.</p>
-                    <p className='text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia amet possimus facilis, rem vitae obcaecati commodi maiores doloremque quasi sit sed temporibus exercitationem fugit quam placeat fuga laudantium, iure maxime.</p>
-                </div>
-            </div>
-            <div className='flex mx-2 my-4'>
-            <span className='text-gray-400'><MdOutlineAccountCircle size='60' /></span>
-                <div className='mx-4'>
-                    <div className='flex mb-2 items-center'>
-                    <p className='text-white font-bold text-sm'>Lorem ipsum dolor sit amet.</p>
+                <div className='flex mb-1 items-center'>
+                    <p className='text-white cursor-pointer font-bold text-sm'>{props.name}</p>
                     <span className='text-gray-400 text-sm mx-2'>2 years ago</span>
                     </div>
-                    <p className='text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia amet possimus facilis, rem vitae obcaecati commodi maiores doloremque quasi sit sed temporibus exercitationem fugit quam placeat fuga laudantium, iure maxime.</p>
+                    <p className='text-white'>{props.desc}</p>
+                    <div className='flex text-white my-2'>
+                        <div className='flex items-center'>
+                            <BiLike size="20" />
+                            <span className='px-2 text-xs cursor-pointer'>{props.like}</span>
+                        </div>
+                        <div className='flex items-center cursor-pointer px-4'>
+                            <BiDislike size="20" />
+                            <span className='text-xs'></span>
+                        </div>
+                        <p className='text-gray-300 text-xs cursor-pointer font-bold'>REPLY</p>
+                    </div>
                 </div>
             </div>
         </>
