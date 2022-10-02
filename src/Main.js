@@ -11,7 +11,7 @@ const Main = () => {
             <div className=' overflow-auto'>
                 {/* <Navbar /> */}
                 <div className='flex'>
-                    {/* <ChatSmall /> */}
+                    <ChatSmall />
                     <div>
                         <Tags />
                         <Contents />

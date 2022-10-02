@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../index.css'
 import { AiFillHome, AiFillYoutube, AiOutlineBulb, AiOutlineTrophy, AiOutlineSetting } from 'react-icons/ai';
 import { BsCameraReels, BsBroadcast, BsFlag } from 'react-icons/bs';
@@ -32,9 +33,12 @@ export default function Modal({ visible, onClose }) {
                             <p className='text-xl font-bold'>YouTube</p>
                         </div>
                     </div>
-
+                    <Link to="/">
                     <SingleChatBig icon= <AiFillHome size="24px"/> title="Home"/>
+                    </Link>
+                    <Link to="/explore">
                     <SingleChatBig icon= <MdOutlineExplore size="24px"/> title="Explore"/>
+                    </Link>
                     <SingleChatBig icon= <BsCameraReels size="24px"/> title="Shorts"/>
                     <SingleChatBig icon= <MdOutlineSubscriptions size="24px"/> title="Subscriptions"/>
 
