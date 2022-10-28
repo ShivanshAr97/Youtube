@@ -4,7 +4,7 @@ import ExploreVideos from './ExploreVideos'
 const ExplorePage = () => {
     return (
         <>
-            <div className='bg-black text-white w-full px-32'>
+            <div className='bg-black text-white w-full px-52'>
                 <h3 className='text-lg font-semibold my-4'>Trending Shorts</h3>
                 <div className='flex'>
                     <ExploreShorts />

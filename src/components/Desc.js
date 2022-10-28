@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AiOutlineLike, AiOutlineScissor } from 'react-icons/ai';
 import { BsThreeDots } from 'react-icons/bs';
 import { BiDislike, BiShare, BiDonateHeart, BiSave } from 'react-icons/bi';
@@ -6,8 +6,14 @@ import DescButtons from './DescButtons';
 import Channel from './Channel';
 
 const Desc = () => {
-    return (
+    const info = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam nihil molestiae quis eos inventore nisi ad rerum ut facilis, in excepturi! Libero distinctio omnis mollitia, quisquam aperiam placeat accusamus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam nihil molestiae quis eos inventore nisi ad rerum ut facilis, in excepturi! Libero distinctio omnis mollitia, quisquam aperiam placeat accusamus.'
 
+    const [readmore, setReadmore] = useState(false)
+    function show() {
+        setReadmore(!readmore)
+  }
+
+    return (
     <div className='bg-black'>
             <p className='text-blue-400 text-sm cursor-pointer'>DSA</p>
             <h3 className='text-white text-xl font-medium'>Lorem ipsum dolor sit amet.</h3>
@@ -15,7 +21,10 @@ const Desc = () => {
                 <p className='text-white text-md font-medium my-2'>1,000,000 views</p>
                 <p className='text-white text-md font-medium m-2'>Date</p>
             </div>
-            <p className='text-gray-300'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, magnam nihil molestiae quis eos inventore nisi ad rerum ut facilis, in excepturi! Libero distinctio omnis mollitia, quisquam aperiam placeat accusamus.</p>
+            <p className='text-gray-300'>{readmore?info:`${info.substring(0,150)} ...`}
+            
+            <button className=' ml-2 text-white font-semibold' onClick={show}>{readmore? ' Show less':'Read more'}</button>
+            </p>
             <div className='flex text-white my-4'>
                 <DescButtons icon= <AiOutlineLike size="24px"/> title="100K"/>
                 <DescButtons icon= <BiDislike size="24px"/> title="Dislike"/>
