@@ -4,7 +4,7 @@ import img1 from '../img/img1.webp'
 const ExploreVideos = () => {
     return (
         <>
-            <div className='mb-4 flex text-gray-400 text-sm font-medium'>
+            <div className='mb-4 flex text-gray-400 text-sm font-medium cursor-pointer'>
                 <img className='w-60 mx-auto flex justify-center' src={img1} alt="" />
                 <div className='mx-2'>
                     <p className='flex text-white text-lg'>Coding AI for Phones 📳</p>

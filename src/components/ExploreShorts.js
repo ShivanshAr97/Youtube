@@ -5,7 +5,7 @@ const ExploreShorts = () => {
     return (
         <>
             <div className='w-[14.5rem] mb-4'>
-                <div className='bg-slate-800 mx-0.5'>
+                <div className='bg-slate-800 mx-0.5 cursor-pointer'>
                     <img className='w-20 mx-auto flex justify-center' src={img4} alt="" />
                 </div>
                 <p className='font-bold my-2'>Coding AI for Phones 📳</p>
