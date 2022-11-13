@@ -1,20 +1,53 @@
-import React from 'react'
+import React, {useState} from 'react'
+import maindata from './MainTagsData'
 import SingleTag from './SingleTag'
+import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs';
 
 const Tags = () => {
+  const [index, setIndex] = useState(0);
+  const {title, title2, title3, title4, title5, title6, title7, title8, title9, title10, title11, title12, title13} = maindata[index]
+
+  const checkNum = (number)=>{
+    if(number<0){
+        return maindata.length-1;
+    }
+    if (number>maindata.length-1){
+        return 0;
+    }
+    return number;
+
+  }
+  const next=()=>{
+    setIndex((index)=>{
+        let newIndex = index+1;
+        return checkNum(newIndex);
+    })
+  }
+
+  const prev=()=>{
+    setIndex((index)=>{
+        let newIndex = index-1;
+        return checkNum(newIndex);
+    })
+  }
   return (
     <>
     <div className='bg-slate-900 fixed h-[3.5rem] border-y w-[94%] ml-20 px-[2rem] flex items-center border-gray-600 text-white'>
-        <SingleTag title="All"/>
-        <SingleTag title="JavaScript"/>
-        <SingleTag title="Laptops"/>
-        <SingleTag title="Live news"/>
-        <SingleTag title="Data Structures"/>
-        <SingleTag title="Music"/>
-        <SingleTag title="Watched"/>
-        <SingleTag title="Comedy"/>
-        <SingleTag title="New to you"/>
-        <SingleTag title="Recently uploaded"/>
+    <span className=" text-gray-300 cursor-pointer mx-2" onClick={prev}><BsArrowLeftCircle size="20px"/></span>
+      <span className='border-slate-600 bg-slate-700 mx-1 m-2 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title}</span>
+      <span className='border-slate-600 bg-slate-700 mx-1 m-2 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title2}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title3}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title4}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title5}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title6}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title7}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title8}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title9}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title10}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title11}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title12}</span>
+      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title13}</span>
+        <span className=" text-gray-300 cursor-pointer fixed mx-[70rem]" onClick={next}><BsArrowRightCircle size="20px"/></span>
     </div>
     </>
   )

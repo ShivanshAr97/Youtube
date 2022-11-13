@@ -4,7 +4,7 @@ import data from './Tagsdata.js'
 
 const Tags = () => {
   const [index, setIndex] = useState(0);
-  const {id, title, title2, title3, title4} = data[index]
+  const {id, title, title2, title3, title4, title5} = data[index]
 
   const checkNum = (number)=>{
     if(number<0){
@@ -29,7 +29,8 @@ const Tags = () => {
       <span className='border-slate-600 bg-slate-700 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title2}</span>
       <span className='border-slate-600 bg-slate-700 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title3}</span>
       <span className='border-slate-600 bg-slate-700 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title4}</span>
-        <span className=" text-gray-300 cursor-pointer mx-4" onClick={next}><BsArrowRightCircle size="20px"/></span>
+      <span className='border-slate-600 bg-slate-700 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title5}</span>
+        <span className=" text-gray-300 cursor-pointer mx-[27rem] fixed" onClick={next}><BsArrowRightCircle size="20px"/></span>
     </div>
     </>
   )
