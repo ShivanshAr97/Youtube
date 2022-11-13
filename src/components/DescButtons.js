@@ -1,7 +1,4 @@
 import React from 'react'
-import { AiOutlineLike, AiOutlineScissor } from 'react-icons/ai';
-import { BsThreeDots } from 'react-icons/bs';
-import { BiDislike, BiShare, BiDonateHeart, BiSave } from 'react-icons/bi';
 
 const DescButtons = (props) => {
     return (
