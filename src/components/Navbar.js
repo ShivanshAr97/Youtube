@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { BsBell, BsMicFill } from 'react-icons/bs';
+import { BsBell, BsMicMuteFill, BsMicFill } from 'react-icons/bs';
 import { BiVideoPlus } from 'react-icons/bi';
 import { IoReorderThreeOutline } from 'react-icons/io5';
 import { MdOutlineAccountCircle } from 'react-icons/md';
 import { AiFillYoutube, AiOutlineSearch } from 'react-icons/ai';
+import  SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 import Notifications from './Notifications';
 import ChatBig from "./ChatBig";
@@ -33,6 +34,31 @@ const Navbar = () => {
     function modal3Show() {
         setShowModal3(true)
     }
+
+    const [mic, setMic] = useState(<BsMicFill size='20px'/>)
+    const [listen, setListen] = useState(false)
+    const [startListen, setStartListen] = useState(SpeechRecognition.stopListening)
+    const micFunc=()=>{
+      setMic(<BsMicFill size='20px'/>)
+      setStartListen(SpeechRecognition.startListening)
+      setListen(true)
+      
+    }
+  
+    const {
+      transcript,
+      resetTranscript,
+      browserSupportsSpeechRecognition
+    } = useSpeechRecognition();
+  
+    if (!browserSupportsSpeechRecognition) {
+      return <span>Browser doesn't support speech recognition.</span>;
+    }
+  
+    const change=()=>{
+      console.log("Hello");
+    }
+
     return (
         <>
             <div className='bg-gray-900 sticky top-0 z-50 flex items-center overflow-auto px-6 py-3 justify-between text-white right-0'>
@@ -49,9 +75,9 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className=' flex items-center'>
-                    <input className=' w-[40rem] p-2 outline-none bg-black border border-gray-800' type="text" placeholder='Search' />
+                    <input onChange={change} value={transcript} className=' w-[40rem] p-2 outline-none bg-black border border-gray-800' type="text" placeholder='Search' />
                     <button className='border border-gray-800 bg-gray-800 px-4 py-[0.45rem]'><AiOutlineSearch size="24px" /></button>
-                    <button className='p-3 rounded-full mx-2 bg-black'><BsMicFill size="20px" /></button>
+                    <button onClick={micFunc} className='p-3 rounded-full mx-2 bg-black'>{mic}</button>
                 </div>
                 <div className='flex items-center'>
                     <Link to="/upload">
