@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { BsBell, BsMicMuteFill, BsMicFill } from 'react-icons/bs';
+import { BsBell, BsMicFill } from 'react-icons/bs';
 import { BiVideoPlus } from 'react-icons/bi';
 import { IoReorderThreeOutline } from 'react-icons/io5';
-import { MdOutlineAccountCircle } from 'react-icons/md';
+import { MdOutlineAccountCircle, MdOutlineCancel } from 'react-icons/md';
 import { AiFillYoutube, AiOutlineSearch } from 'react-icons/ai';
 import  SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
@@ -37,12 +37,13 @@ const Navbar = () => {
 
     const [mic, setMic] = useState(<BsMicFill size='20px'/>)
     const [listen, setListen] = useState(false)
+    const [visi, setVisi] = useState('none')
     const [startListen, setStartListen] = useState(SpeechRecognition.stopListening)
     const micFunc=()=>{
       setMic(<BsMicFill size='20px'/>)
       setStartListen(SpeechRecognition.startListening)
       setListen(true)
-      
+      setVisi('block')      
     }
   
     const {
@@ -76,6 +77,7 @@ const Navbar = () => {
                 </div>
                 <div className=' flex items-center'>
                     <input onChange={change} value={transcript} className=' w-[40rem] p-2 outline-none bg-black border border-gray-800' type="text" placeholder='Search' />
+                    <button style={{ display: visi }} className='fixed m-[38rem]'><MdOutlineCancel size="20px" /></button>
                     <button className='border border-gray-800 bg-gray-800 px-4 py-[0.45rem]'><AiOutlineSearch size="24px" /></button>
                     <button onClick={micFunc} className='p-3 rounded-full mx-2 bg-black'>{mic}</button>
                 </div>
@@ -83,7 +85,7 @@ const Navbar = () => {
                     <Link to="/upload">
                         <BiVideoPlus className=' cursor-pointer mx-4' size="24px" />
                     </Link>
-                    <span onClick={modal3Show}><BsBell className=' cursor-pointer mx-4' size="24px" /></span>
+                    <span onClick={modal3Show}><BsBell className=' cursor-pointer mx-4' size="20px" /></span>
                     <span onClick={modal2Show}><MdOutlineAccountCircle className=' cursor-pointer mx-4 mr-6' size="24px" /></span>
                 </div>
             </div>

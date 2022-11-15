@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
 import maindata from './MainTagsData'
-import SingleTag from './SingleTag'
 import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs';
 
 const Tags = () => {
   const [index, setIndex] = useState(0);
-  const {title, title2, title3, title4, title5, title6, title7, title8, title9, title10, title11, title12, title13} = maindata[index]
+  const {title, title2, title3, title4, title5, title6, title7, title8, title9, title10, title11, title12} = maindata[index]
 
   const checkNum = (number)=>{
     if(number<0){
@@ -33,7 +32,7 @@ const Tags = () => {
   return (
     <>
     <div className='bg-slate-900 fixed h-[3.5rem] border-y w-[94%] ml-20 px-[1rem] flex items-center border-gray-600 text-white'>
-    <span className=" text-gray-300 cursor-pointer mx-2" onClick={prev}><BsArrowLeftCircle size="20px"/></span>
+    <span className=" text-gray-300 cursor-pointer mx-4" onClick={prev}><BsArrowLeftCircle size="20px"/></span>
       <span className='border-slate-600 bg-slate-700 mx-1 m-2 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title}</span>
       <span className='border-slate-600 bg-slate-700 mx-1 m-2 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title2}</span>
       <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title3}</span>
@@ -46,7 +45,6 @@ const Tags = () => {
       <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title10}</span>
       <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title11}</span>
       <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title12}</span>
-      <span className='border-slate-600 bg-slate-700 m-2 mx-1 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title13}</span>
         <span className=" text-gray-300 cursor-pointer fixed mx-[70rem]" onClick={next}><BsArrowRightCircle size="20px"/></span>
     </div>
     </>
