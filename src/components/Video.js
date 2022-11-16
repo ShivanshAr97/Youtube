@@ -9,6 +9,7 @@ const Video = () => {
     return (
         <div className='flex bg-black'>
         <div className='pl-12 mr-4 w-[70%]'>
+        {/* <iframe className='mt-6 mb-4'  width="700" height="370" src="https://www.youtube.com/embed/hNx3WVi1oPU" title="Project 1: PDF Merger WebApp Using JavaScript & Bootstrap | JavaScript Tutorial in Hindi #102" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
             <video className=' pt-6 outline-none' src={video1} controls></video>
             <Desc/>
             <Comments/>
