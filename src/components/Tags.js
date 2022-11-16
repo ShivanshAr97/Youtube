@@ -31,7 +31,7 @@ const Tags = () => {
   }
   return (
     <>
-    <div className='bg-slate-900 fixed h-[3.5rem] border-y w-[94%] ml-20 px-[1rem] flex items-center border-gray-600 text-white'>
+    <div className='bg-slate-900 fixed h-[3.6rem] z-10 border-y w-[94%] ml-20 px-[1rem] flex items-center border-gray-600 text-white'>
     <span className=" text-gray-300 cursor-pointer mx-4" onClick={prev}><BsArrowLeftCircle size="20px"/></span>
       <span className='border-slate-600 bg-slate-700 mx-1 m-2 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title}</span>
       <span className='border-slate-600 bg-slate-700 mx-1 m-2 font-medium rounded-2xl px-3 py-1 w-fit cursor-pointer hover:bg-slate-600'>{title2}</span>

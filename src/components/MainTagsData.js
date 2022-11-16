@@ -37,7 +37,7 @@ const maindata = [
         title4: "Bodybuildin",
         title5: "New to you",
         title6: "Lessons",
-        title7: "Market",
+        title7: "Stocks",
         title8: "Sports",
         title9: "Shopping",
         title10: "Science",
